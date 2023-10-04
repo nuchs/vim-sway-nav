@@ -12,7 +12,7 @@ let g:loaded_vim_sway_nav = 1
 function s:setup()
     " Ensure we are running a server.
     if empty(v:servername) && !has("nvim")
-        call remote_startserver($'{rand()}')
+        call remote_startserver(string(rand()))
     endif
 
     " Create a file so the helper script knows how to send a command.
